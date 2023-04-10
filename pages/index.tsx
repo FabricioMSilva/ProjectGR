@@ -13,7 +13,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({todos}) {
+export default function Home({ todos }: { todos: any }) {
 
   return (
     <div className={styles.Home}>
