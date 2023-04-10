@@ -50,7 +50,8 @@ export default function Card({ todos }) {
                     if (Pesquisa === "") {
                         return Filtrado
                     }
-                    return Filtrado.CONJUNTO.includes(Pesquisa)
+                    return Filtrado.CONJUNTO.includes(pesquisa) ||
+                        Filtrado.Maquina.includes(pesquisa)
                 })?.map(todos => (
 
                     <div onClick={() => { abrirModal(), setModalDados(todos) }} type='Submit' className={styless.Pai} key={todos?.id} >
