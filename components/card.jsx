@@ -47,11 +47,10 @@ export default function Card({ todos }) {
 
 
                 {todos.filter((Filtrado) => {
-                    if (Pesquisa === "") {
+                    if (Pesquisa === ""  ) {
                         return Filtrado
                     }
-                    return Filtrado.CONJUNTO.includes(pesquisa) ||
-                        Filtrado.Maquina.includes(pesquisa)
+                    return Filtrado.CONJUNTO.includes(Pesquisa) ||              Filtrado.MAQUINA.includes(Pesquisa)
                 })?.map(todos => (
 
                     <div onClick={() => { abrirModal(), setModalDados(todos) }} type='Submit' className={styless.Pai} key={todos?.id} >
