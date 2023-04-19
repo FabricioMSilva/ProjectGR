@@ -1,31 +1,33 @@
 
-
+import PushMat from '../pages/PushMat'
 import { useState } from 'react'
 import styless from '../styles/card.module.css'
 import Modal from 'react-modal'
-
-
+import Materiais from '../pages/api/materiais/Materiais'
 
 export default function Card({ todos }) {
-
     const [Pesquisa, setPesquisa] = useState('')
-
+    const [ID , setId] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
     const [modalDados, setModalDados] = useState(null)
+    const [MatTudo, setMatTudo]  = useState([''])    
 
-    function carregarModal() {
-
-    }
 
     function abrirModal() {
         setIsOpen(true);
-        console.log(modalDados)
     }
-
-    // Função que fecha a modal
     function fecharModal() {
         setIsOpen(false);
     }
+   function recebeDados(){
+        fetch({Materiais})
+            .then(res => res.json())
+            .then(result => this.setMatTudo({ result }))
+            .catch(err => err);
+            console.log(MatTudo)
+    }
+
+
 
     return (
 
@@ -47,13 +49,13 @@ export default function Card({ todos }) {
 
 
                 {todos.filter((Filtrado) => {
-                    if (Pesquisa === ""  ) {
+                    if (Pesquisa === "") {
                         return Filtrado
                     }
-                    return Filtrado.CONJUNTO.includes(Pesquisa)// ||              Filtrado.MAQUINA.includes(Pesquisa)
+                    return Filtrado.CONJUNTO.includes(Pesquisa) || Filtrado.MAQUINA.includes(Pesquisa)
                 })?.map(todos => (
 
-                    <div onClick={() => { abrirModal(), setModalDados(todos) }} type='Submit' className={styless.Pai} key={todos?.id} >
+                    <div onClick={() => { abrirModal(), setModalDados(todos),recebeDados(), setId(todos?.id)}}  type='Submit' className={styless.Pai} key={todos?.id} >
 
 
                         <div key={todos?.id} className={styless.divFoto}>
@@ -95,24 +97,9 @@ export default function Card({ todos }) {
                                     <a key={modalDados?.ID} href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
                                 </div>
                             </div>
+
                             <div className={styless.divFotoModal}>
-                                <div>
-                                    <h1>Material para Reparo</h1>
-                                    <table>
-                                        <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Peter</td>
-                                            <td>Griffin</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lois</td>
-                                            <td>Griffin</td>
-                                        </tr>
-                                    </table>
-                                </div>
+                             <PushMat/>
                                 <div>
                                     <img className={styless.fotoModal}
                                         src={modalDados?.FOTO}
