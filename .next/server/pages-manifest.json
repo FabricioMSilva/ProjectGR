@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/PushMat": "pages/PushMat.js",
   "/": "pages/index.js",
   "/api/materiais/Materiais": "pages/api/materiais/Materiais.js"
 }

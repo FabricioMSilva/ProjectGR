@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-export default function PushMat() {
+export default function PushMat(ID:string) {
     const [todmat, setTodmat] = useState([]);
 
     const getAllData = () => {
@@ -18,6 +18,7 @@ export default function PushMat() {
     return (
         <div>
            <h1>Material para Reparo</h1>
+          
            
                 <div>
                     

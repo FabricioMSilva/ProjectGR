@@ -1,17 +1,29 @@
 
 import PushMat from '../pages/PushMat'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import styless from '../styles/card.module.css'
 import Modal from 'react-modal'
 import Materiais from '../pages/api/materiais/Materiais'
 
 export default function Card({ todos }) {
     const [Pesquisa, setPesquisa] = useState('')
-    const [ID , setId] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
     const [modalDados, setModalDados] = useState(null)
     const [MatTudo, setMatTudo]  = useState([''])    
+    const [todmat, setTodmat] = useState([]);
+    const getAllData = () => {
+        fetch('/api/materiais/Materiais')
+            .then((result) => result.json())
+            .then((result) => setTodmat(result))
+    }
 
+    const [ ID , setid]=useState("")
+    useEffect(() => {
+        getAllData()
+    }, [])
+ 
+
+    
 
     function abrirModal() {
         setIsOpen(true);
@@ -27,7 +39,10 @@ export default function Card({ todos }) {
             console.log(MatTudo)
     }
 
-
+    function escolhendoID(){
+        setid(modalDados?.ID)
+        console.log(ID)
+    }
 
     return (
 
@@ -55,7 +70,7 @@ export default function Card({ todos }) {
                     return Filtrado.CONJUNTO.includes(Pesquisa) || Filtrado.MAQUINA.includes(Pesquisa)
                 })?.map(todos => (
 
-                    <div onClick={() => { abrirModal(), setModalDados(todos),recebeDados(), setId(todos?.id)}}  type='Submit' className={styless.Pai} key={todos?.id} >
+                    <div onClick={() => {  escolhendoID(), abrirModal(), setModalDados(todos),recebeDados()}}  type='Submit' className={styless.Pai}  >
 
 
                         <div key={todos?.id} className={styless.divFoto}>
@@ -78,7 +93,7 @@ export default function Card({ todos }) {
 
                 <div key={modalDados?.ID} >
                     <Modal
-
+                    
                         isOpen={modalIsOpen}
                         onRequestClose={fecharModal}
                         contentLabel="Modal de exemplo"
@@ -89,17 +104,48 @@ export default function Card({ todos }) {
                                 <div >
                                     <button onClick={fecharModal}>Fechar</button>
                                 </div>
-                                <h1 key={modalDados?.ID} className={styless.titleModal}>{modalDados?.MAQUINA}</h1><h1 key={modalDados?.ID} className={styless.titleModal}>{modalDados?.CONJUNTO}</h1>
+                                <h1 key={modalDados?.ID} className={styless.titleModal}>{modalDados?.MAQUINA}</h1><h1 className={styless.titleModal}>{modalDados?.CONJUNTO}</h1>
                                 <div className={styless.idMdal} >
                                     <p key={modalDados?.ID} className={styless.idModal}>ID:{modalDados?.ID}</p>
 
-                                    <p key={modalDados?.ID} className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
-                                    <a key={modalDados?.ID} href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
+                                    <p  className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
+                                    <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
                                 </div>
                             </div>
 
                             <div className={styless.divFotoModal}>
-                             <PushMat/>
+                                <div>
+                                    <h1>Material para Reparo</h1>
+
+
+                                    <div>
+
+                                        <table>
+
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>CODIGO</th>
+                                                <th>MATERIAL</th>
+                                                <th>QTD JN</th>
+
+                                            </tr>
+                                            {todmat.filter((to) => { return modalDados?.ID === to.ID })?.map((item) => (
+                                                <tr>
+                                                    <td>{item?.ID}</td>
+                                                    <td>{item?.CODIGO}</td>
+                                                    <td>{item?.MATERIAL}</td>
+                                                    <td>{item?.UTILIZADO}</td>
+                                                    <td>{item?.REF}</td>
+                                                    <td>{item?.JN}</td>
+                                                    <td>{item?.VALOR}</td>
+
+                                                </tr>
+
+                                            ))}
+                                        </table>
+                                    </div>
+
+                                </div>
                                 <div>
                                     <img className={styless.fotoModal}
                                         src={modalDados?.FOTO}
