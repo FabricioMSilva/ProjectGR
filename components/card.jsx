@@ -1,15 +1,16 @@
 
 import PushMat from '../pages/PushMat'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import styless from '../styles/card.module.css'
 import Modal from 'react-modal'
 import Materiais from '../pages/api/materiais/Materiais'
+import X from './imagens/cancelar.png'
 
 export default function Card({ todos }) {
     const [Pesquisa, setPesquisa] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
     const [modalDados, setModalDados] = useState(null)
-    const [MatTudo, setMatTudo]  = useState([''])    
+    const [MatTudo, setMatTudo] = useState([''])
     const [todmat, setTodmat] = useState([]);
     const getAllData = () => {
         fetch('/api/materiais/Materiais')
@@ -17,13 +18,13 @@ export default function Card({ todos }) {
             .then((result) => setTodmat(result))
     }
 
-    const [ ID , setid]=useState("")
+    const [ID, setid] = useState("")
     useEffect(() => {
         getAllData()
     }, [])
- 
 
-    
+
+
 
     function abrirModal() {
         setIsOpen(true);
@@ -31,15 +32,15 @@ export default function Card({ todos }) {
     function fecharModal() {
         setIsOpen(false);
     }
-   function recebeDados(){
-        fetch({Materiais})
+    function recebeDados() {
+        fetch({ Materiais })
             .then(res => res.json())
             .then(result => this.setMatTudo({ result }))
             .catch(err => err);
-            console.log(MatTudo)
+        console.log(MatTudo)
     }
 
-    function escolhendoID(){
+    function escolhendoID() {
         setid(modalDados?.ID)
         console.log(ID)
     }
@@ -70,7 +71,7 @@ export default function Card({ todos }) {
                     return Filtrado.CONJUNTO.includes(Pesquisa) || Filtrado.MAQUINA.includes(Pesquisa)
                 })?.map(todos => (
 
-                    <div onClick={() => {  escolhendoID(), abrirModal(), setModalDados(todos),recebeDados()}}  type='Submit' className={styless.Pai}  >
+                    <div onClick={() => { escolhendoID(), abrirModal(), setModalDados(todos), recebeDados() }} type='Submit' className={styless.Pai}  >
 
 
                         <div key={todos?.id} className={styless.divFoto}>
@@ -93,48 +94,79 @@ export default function Card({ todos }) {
 
                 <div key={modalDados?.ID} >
                     <Modal
-                    
                         isOpen={modalIsOpen}
                         onRequestClose={fecharModal}
-                        contentLabel="Modal de exemplo"
-
-                    >
+                        contentLabel="Modal de conjuntos" 
+                       >
                         <div className={styless.PaiModal}>
-                            <div className={styless.tituloMdal}>
-                                <div >
-                                    <button onClick={fecharModal}>Fechar</button>
-                                </div>
-                                <h1 key={modalDados?.ID} className={styless.titleModal}>{modalDados?.MAQUINA}</h1><h1 className={styless.titleModal}>{modalDados?.CONJUNTO}</h1>
-                                <div className={styless.idMdal} >
-                                    <p key={modalDados?.ID} className={styless.idModal}>ID:{modalDados?.ID}</p>
+                              
+                            <div className={styless.Div1}>
+                            
+                               
+                                <div className={styless.tituloMdal}>
 
-                                    <p  className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
-                                    <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
+                                    <h1
+                                        key={modalDados?.ID}
+                                        className={styless.titleModal}
+                                    >{modalDados?.MAQUINA}
+                                    </h1>
+
+                                    <h1 className={styless.titleModal}>{modalDados?.CONJUNTO}
+                                    </h1>
                                 </div>
+
+                                <div className={styless.divFotoModal}>
+
+                                
+                                        <img className={styless.fotoModal}
+                                            src={modalDados?.FOTO}
+                                            alt="foto" />
+                                   <div className={styless.idMdal} >
+                                    <p key={modalDados?.ID} className={styless. idModal}>ID:{modalDados?.ID}</p>
+
+                                     <p className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
+                                     <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
+                                    </div>
+
+                                </div>
+
+
+                              
                             </div>
+                           
+                            <div className={styless.Div2}>
+                            
+                                <div
+                                    className={styless.btnFechar}>
+                                    <button
+                                        className={styless.btnFechar}
+                                        onClick={fecharModal}>x
+                                    </button>
+                                </div>
+                         
+                                <div className={ styless.TabelaModalPai} >
+                                    <div className={styless.titleModal2}>   
+                                        <h1>Material para Reparo</h1>
+                                    </div>
+                                 
 
-                            <div className={styless.divFotoModal}>
-                                <div>
-                                    <h1>Material para Reparo</h1>
+                                    <div className={styless.tabelaModal}>
 
+                                        <table className={styless.table}>
 
-                                    <div>
-
-                                        <table>
-
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>CODIGO</th>
-                                                <th>MATERIAL</th>
-                                                <th>QTD JN</th>
+                                            <tr className={styless.tableTr}>
+                                               
+                                                <th className={styless.tdMaterial}>CODIGO</th>
+                                                <th className={styless.tdMaterial}>MATERIAL</th>
+                                                <th className={styless.tdMaterial}>QTD JN</th>
 
                                             </tr>
                                             {todmat.filter((to) => { return modalDados?.ID === to.ID })?.map((item) => (
-                                                <tr>
-                                                    <td>{item?.ID}</td>
-                                                    <td>{item?.CODIGO}</td>
-                                                    <td>{item?.MATERIAL}</td>
-                                                    <td>{item?.UTILIZADO}</td>
+                                                <tr className = {styless.tableTr2}>
+                                                  
+                                                    <td className={styless.tdMaterial}>{item?.CODIGO}</td>
+                                                    <td className={styless.tdMaterial}>{item?.MATERIAL}</td>
+                                                    <td className={styless.tdMaterial}>{item?.UTILIZADO}</td>
                                                     <td>{item?.REF}</td>
                                                     <td>{item?.JN}</td>
                                                     <td>{item?.VALOR}</td>
@@ -146,15 +178,18 @@ export default function Card({ todos }) {
                                     </div>
 
                                 </div>
-                                <div>
-                                    <img className={styless.fotoModal}
-                                        src={modalDados?.FOTO}
-                                        alt="foto" />
-                                </div>
-                            </div>
-                            <div> <p key={modalDados?.ID} clasName={styless.idModal}>Descrição:{modalDados?.DESCRICAO}</p>
                             </div>
                         </div>
+
+
+
+                        <div className={styless.DescricaoModal}>
+                            <p key={modalDados?.ID} clasName={styless.descModal}>{modalDados?.DESCRICAO}</p>
+                        </div>
+
+
+
+
                     </Modal>
                 </div>
             </div>
