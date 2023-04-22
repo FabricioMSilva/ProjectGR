@@ -1,7 +1,19 @@
 .Home{
-margin: 0px 0;
-    background-image: url('../components/imagens/—Pngtree—blue\ atmospheric\ background_913348.jpg');
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    }
+background-color: rgb(255, 255, 255);
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:24% 0%}
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:24% 0%}
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:24% 0%}
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0%}
+}

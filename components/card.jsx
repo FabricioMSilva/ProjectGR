@@ -1,16 +1,14 @@
 
-import PushMat from '../pages/PushMat'
+
 import { useState, useEffect } from 'react'
 import styless from '../styles/card.module.css'
 import Modal from 'react-modal'
-import Materiais from '../pages/api/materiais/Materiais'
-import X from './imagens/cancelar.png'
 
 export default function Card({ todos }) {
     const [Pesquisa, setPesquisa] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
     const [modalDados, setModalDados] = useState(null)
-    const [MatTudo, setMatTudo] = useState([''])
+ 
     const [todmat, setTodmat] = useState([]);
     const getAllData = () => {
         fetch('/api/materiais/Materiais')
@@ -22,24 +20,13 @@ export default function Card({ todos }) {
     useEffect(() => {
         getAllData()
     }, [])
-
-
-
-
     function abrirModal() {
         setIsOpen(true);
     }
     function fecharModal() {
         setIsOpen(false);
     }
-    function recebeDados() {
-        fetch({ Materiais })
-            .then(res => res.json())
-            .then(result => this.setMatTudo({ result }))
-            .catch(err => err);
-        console.log(MatTudo)
-    }
-
+  
     function escolhendoID() {
         setid(modalDados?.ID)
         console.log(ID)
@@ -71,7 +58,7 @@ export default function Card({ todos }) {
                     return Filtrado.CONJUNTO.includes(Pesquisa) || Filtrado.MAQUINA.includes(Pesquisa)
                 })?.map(todos => (
 
-                    <div onClick={() => { escolhendoID(), abrirModal(), setModalDados(todos), recebeDados() }} type='Submit' className={styless.Pai}  >
+                    <div onClick={() => { escolhendoID(), abrirModal(), setModalDados(todos) }} type='Submit' className={styless.Pai}  >
 
 
                         <div key={todos?.id} className={styless.divFoto}>
@@ -92,7 +79,7 @@ export default function Card({ todos }) {
                     </div>
                 ))}
 
-                <div key={modalDados?.ID} >
+                <div key={modalDados?.ID} className={styless.modalOverlay} >
                     <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={fecharModal}

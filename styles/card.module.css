@@ -24,12 +24,12 @@
 
 .inputPesquisa {
   width: 420px;
-  height: 40px;
-  font-size: 2rem;
+  height: 30px;
+  font-size: 1.2rem;
   text-align: center;
   border-radius: 25px;
   background-color: white;
-  border: rgb(255, 255, 255) 1px solid;
+  border:rgb(8, 171, 221) 1px solid;
   color: rgb(0, 0, 0);
 }
 
@@ -47,6 +47,7 @@
   width: 250px;
   height: 250px;
   border-radius: 10px;
+  border: solid rgb(8, 171, 221) 1px;
   justify-items: flex-start;
   background-color: white;
 
@@ -61,13 +62,17 @@ width: 250px;
 }
 
 .foto {
-
+display:flex;
   width: 99%;
   height: 99%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: rgb(0, 146, 214);
   border-radius: 10px;
+  
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .foto:hover {
@@ -84,7 +89,7 @@ width: 250px;
   -webkit-filter: grayescale(100%);
   filter: grayescale(100%);
   filter: transparent;
-  /* IE */
+  
 }
 
 
@@ -113,7 +118,7 @@ width: 250px;
 .Pai:hover {
   position: none;
   border-radius: 10px;
-  border: yellow 2px solid;
+  border: yellow 4px solid ;
   transition: 2s;
 }
 
@@ -131,7 +136,7 @@ width: 250px;
   top: 0;
   width: 250px;
   font: bold;
-  font-size: 14pt;
+  font-size: 12pt;
   text-align: center;
   position: absolute;
 
@@ -147,12 +152,40 @@ width: 100vw;
 height: 100%;
 margin: 0;
 padding: 0;
+-webkit-animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
 }
 .PaiModal:hover{
   opacity: 1;
 
 }
+.modalOverlay{
 
+-webkit-animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  background-color: rgba(0, 0, 0, 0.342);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+@keyframes scale-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }}
 .Div1 {
 display: grid;
 justify-items: center;

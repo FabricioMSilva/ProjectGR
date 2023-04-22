@@ -1,0 +1,30 @@
+.DivIcons {
+
+    display: grid;
+    justify-content: center;
+    width: 8vw;
+text-align: center;
+    align-content: space-around;
+    background-color: white;
+    height: 100vh;
+    border-right: solid 1px  rgb(8, 171, 221);
+    position: fixed;
+}
+
+.Icon {
+    display: grid;
+   text-align: center;
+   margin-left: 6px;
+  font-size: 10pt;
+}
+
+.iconcasa {
+    display: flex;
+
+    width: 60px;
+    height: 60px;
+  margin-left: 8px;
+   
+
+
+}
