@@ -145,7 +145,7 @@ export default function Card({ todos }) {
                                                
                                                 <th className={styless.tdMaterial}>CODIGO</th>
                                                 <th className={styless.tdMaterial}>MATERIAL</th>
-                                                <th className={styless.tdMaterial}>QTD JN</th>
+                                                <th className={styless.tdMaterial}>QTD.</th>
 
                                             </tr>
                                             {todmat.filter((to) => { return modalDados?.ID === to.ID })?.map((item) => (

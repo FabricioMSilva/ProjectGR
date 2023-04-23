@@ -7,15 +7,22 @@ text-align: center;
     align-content: space-around;
     background-color: white;
     height: 100vh;
-    border-right: solid 1px  rgb(8, 171, 221);
+    border-right: outset 10px  rgb(8, 171, 221);
     position: fixed;
 }
 
 .Icon {
     display: grid;
    text-align: center;
+  
    margin-left: 6px;
   font-size: 10pt;
+
+}
+.Icon:hover{
+  border: yellow 6px outset;
+   
+    transition: 2s;
 }
 
 .iconcasa {
@@ -24,7 +31,12 @@ text-align: center;
     width: 60px;
     height: 60px;
   margin-left: 8px;
-   
+    margin-top: 8px;
 
 
+}
+.iconcasa:hover{
+    -webkit-filter: grayescale(1);
+      filter: grayescale(1);
+      filter: yellow;
 }

@@ -1,5 +1,5 @@
 .Home{
-background-color: rgb(255, 255, 255);
+background-image: linear-gradient(to left top, #030364, #00308b, #0057ad, #007ecb, #00a5e5, #00a4de, #06a3d7, #13a2d0, #1f7ba9, #225581, #1c3358, #101531);
 }
 
 @-webkit-keyframes AnimationName {
