@@ -1,5 +1,5 @@
 import api from './api/ListaConjuntos.json'
-import styles from '@/styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 import Card from '../components/card'
 import Menu from '../components/Menu'
 export async function getStaticProps() {
@@ -16,8 +16,8 @@ export default function Home({ todos }: { todos: any }) {
 
   return (
     <div className={styles.Home}>
-    <Menu/>
-    <Card todos={todos} />
+      <Menu />
+      <Card todos={todos} />
 
 
     </div>
