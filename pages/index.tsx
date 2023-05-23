@@ -1,6 +1,6 @@
 import api from './api/ListaConjuntos.json'
 import styles from '../styles/Home.module.css'
-import Card from '../components/card'
+import Card from '../components/cadastro'
 import Menu from '../components/Menu'
 export async function getStaticProps() {
   //   const data = await fetch('https://sheetdb.io/api/v1/vrryyqg2sfdor')
@@ -16,9 +16,8 @@ export default function Home({ todos }: { todos: any }) {
 
   return (
     <div className={styles.Home}>
-      <Menu />
-      <Card todos={todos} />
-
+      <div className={styles.Menu}><Menu /></div>
+      <div className={styles.Card}><Card todos={todos} /></div>
 
     </div>
   )

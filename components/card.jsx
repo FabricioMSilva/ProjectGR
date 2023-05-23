@@ -84,25 +84,34 @@ export default function Card({ todos }) {
                         isOpen={modalIsOpen}
                         onRequestClose={fecharModal}
                         contentLabel="Modal de conjuntos" 
-                       >
-                        <div className={styless.PaiModal}>
-                              
-                            <div className={styless.Div1}>
-                            
-                               
-                                <div className={styless.tituloMdal}>
-
-                                    <h1
+                        className={styless.AvoModla}
+                       >        
+                           <div
+                                    className={styless.btnFechar}>
+                                    <button
+                                        className={styless.btnFechar}
+                                        onClick={fecharModal}>x
+                                    </button>
+                            </div>
+                       
+                       
+                       <h1
                                         key={modalDados?.ID}
                                         className={styless.titleModal}
                                     >{modalDados?.MAQUINA}
-                                    </h1>
+                                </h1>
 
-                                    <h1 className={styless.titleModal}>{modalDados?.CONJUNTO}
-                                    </h1>
-                                </div>
-
-                                <div className={styless.divFotoModal}>
+                                <h1 className={styless.titleModal}>{modalDados?.CONJUNTO}
+                                </h1>
+                                
+                          
+                        <div className={styless.PaiModal}>
+                              
+                            <div className={styless.Div1}>
+                            <div className={styless.tituloMdal}>
+  <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
+                                    </div>
+                                  <div className={styless.divFotoModal}>
 
                                 
                                         <img className={styless.fotoModal}
@@ -112,10 +121,16 @@ export default function Card({ todos }) {
                                     <p key={modalDados?.ID} className={styless. idModal}>ID:{modalDados?.ID}</p>
 
                                      <p className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
-                                     <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
-                                    </div>
+                                   
 
                                 </div>
+
+
+                                </div>
+                               
+                                
+
+                               
 
 
                               
@@ -123,18 +138,10 @@ export default function Card({ todos }) {
                            
                             <div className={styless.Div2}>
                             
-                                <div
-                                    className={styless.btnFechar}>
-                                    <button
-                                        className={styless.btnFechar}
-                                        onClick={fecharModal}>x
-                                    </button>
-                                </div>
+                                
                          
                                 <div className={ styless.TabelaModalPai} >
-                                    <div className={styless.titleModal2}>   
-                                        <h1>Material para Reparo</h1>
-                                    </div>
+                                  
                                  
 
                                     <div className={styless.tabelaModal}>

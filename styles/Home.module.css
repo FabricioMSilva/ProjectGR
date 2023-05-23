@@ -1,19 +1,8 @@
 .Home{
-background-image: linear-gradient(to left top, #030364, #00308b, #0057ad, #007ecb, #00a5e5, #00a4de, #06a3d7, #13a2d0, #1f7ba9, #225581, #1c3358, #101531);
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:24% 0%}
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:24% 0%}
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:24% 0%}
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0%}
-}
+.Card{
+   margin-top: 10vh;}

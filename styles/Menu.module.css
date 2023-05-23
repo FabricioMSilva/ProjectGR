@@ -2,12 +2,12 @@
 
     display: grid;
     justify-content: center;
-    width: 8vw;
+    width: 10vw;
 text-align: center;
     align-content: space-around;
     background-color: white;
     height: 100vh;
-    border-right: outset 10px  rgb(8, 171, 221);
+
     position: fixed;
 }
 
