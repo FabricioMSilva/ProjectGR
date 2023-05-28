@@ -1,8 +1,6 @@
 import api from './api/ListaConjuntos.json'
 import styles from '../styles/Home.module.css'
-import Card from '../components/cadastro'
-
-import Menu from '../components/Menu'
+import PaginaInicial from '../pages/PaginaInicial'
 export async function getStaticProps() {
   //   const data = await fetch('https://sheetdb.io/api/v1/vrryyqg2sfdor')
   //   const todos = await data.json()
@@ -13,13 +11,13 @@ export async function getStaticProps() {
 }
 
 
-export default function Home({ todos }: { todos: any }) {
+export default function Home() {
 
   return (
     <div className={styles.Home}>
      
       <div className={styles.Card}>
-        <Card todos={todos} />
+        <PaginaInicial />
       </div>
 
     </div>
