@@ -1,0 +1,22 @@
+.Avo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ background-color: white;
+    width: 100vw;
+  
+}
+
+
+.DivFundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 1vh;
+    width: 100vw;
+    height: 100vh;
+}
+.IMG{
+    width: 18vw;
+}

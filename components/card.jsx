@@ -8,7 +8,7 @@ export default function Card({ todos }) {
     const [Pesquisa, setPesquisa] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
     const [modalDados, setModalDados] = useState(null)
- 
+
     const [todmat, setTodmat] = useState([]);
     const getAllData = () => {
         fetch('/api/materiais/Materiais')
@@ -26,7 +26,7 @@ export default function Card({ todos }) {
     function fecharModal() {
         setIsOpen(false);
     }
-  
+
     function escolhendoID() {
         setid(modalDados?.ID)
         console.log(ID)
@@ -35,7 +35,7 @@ export default function Card({ todos }) {
     return (
 
         <div className={styless.bisaAvo}>
-
+           
             <div className={styless.pesquisar}  >
                 <input
 
@@ -51,7 +51,7 @@ export default function Card({ todos }) {
 
 
 
-                {todos.filter((Filtrado) => {
+                {todos?.filter((Filtrado) => {
                     if (Pesquisa === "") {
                         return Filtrado
                     }
@@ -83,81 +83,81 @@ export default function Card({ todos }) {
                     <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={fecharModal}
-                        contentLabel="Modal de conjuntos" 
+                        contentLabel="Modal de conjuntos"
                         className={styless.AvoModla}
-                       >        
-                           <div
-                                    className={styless.btnFechar}>
-                                    <button
-                                        className={styless.btnFechar}
-                                        onClick={fecharModal}>x
-                                    </button>
-                            </div>
-                       
-                       
-                       <h1
-                                        key={modalDados?.ID}
-                                        className={styless.titleModal}
-                                    >{modalDados?.MAQUINA}
-                                </h1>
+                    >
+                        <div
+                            className={styless.btnFechar}>
+                            <button
+                                className={styless.btnFechar}
+                                onClick={fecharModal}>x
+                            </button>
+                        </div>
 
-                                <h1 className={styless.titleModal}>{modalDados?.CONJUNTO}
-                                </h1>
-                                
-                          
+
+                        <h1
+                            key={modalDados?.ID}
+                            className={styless.titleModal}
+                        >{modalDados?.MAQUINA}
+                        </h1>
+
+                        <h1 className={styless.titleModal}>{modalDados?.CONJUNTO}
+                        </h1>
+
+
                         <div className={styless.PaiModal}>
-                              
+
                             <div className={styless.Div1}>
-                            <div className={styless.tituloMdal}>
-  <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
+                                <div className={styless.tituloMdal}>
+                                    <a href={modalDados?.LINKDESENHO} className={styless.idModal}>Desenho:{modalDados?.DESENHO}</a>
+                                </div>
+                                <div className={styless.divFotoModal}>
+
+
+                                    <img className={styless.fotoModal}
+                                        src={modalDados?.FOTO}
+                                        alt="foto" />
+                                    <div className={styless.idMdal} >
+                                        <p key={modalDados?.ID} className={styless.idModal}>ID:{modalDados?.ID}</p>
+
+                                        <p className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
+
+
                                     </div>
-                                  <div className={styless.divFotoModal}>
-
-                                
-                                        <img className={styless.fotoModal}
-                                            src={modalDados?.FOTO}
-                                            alt="foto" />
-                                   <div className={styless.idMdal} >
-                                    <p key={modalDados?.ID} className={styless. idModal}>ID:{modalDados?.ID}</p>
-
-                                     <p className={styless.idModal}>Minimo:{modalDados?.MINIMO}</p>
-                                   
-
-                                </div>
 
 
                                 </div>
-                               
-                                
-
-                               
 
 
-                              
+
+
+
+
+
                             </div>
-                           
+
                             <div className={styless.Div2}>
-                            
-                                
-                         
-                                <div className={ styless.TabelaModalPai} >
-                                  
-                                 
+
+
+
+                                <div className={styless.TabelaModalPai} >
+
+
 
                                     <div className={styless.tabelaModal}>
 
                                         <table className={styless.table}>
 
                                             <tr className={styless.tableTr}>
-                                               
+
                                                 <th className={styless.tdMaterial}>CODIGO</th>
                                                 <th className={styless.tdMaterial}>MATERIAL</th>
                                                 <th className={styless.tdMaterial}>QTD.</th>
 
                                             </tr>
                                             {todmat.filter((to) => { return modalDados?.ID === to.ID })?.map((item) => (
-                                                <tr className = {styless.tableTr2}>
-                                                  
+                                                <tr className={styless.tableTr2}>
+
                                                     <td className={styless.tdMaterial}>{item?.CODIGO}</td>
                                                     <td className={styless.tdMaterial}>{item?.MATERIAL}</td>
                                                     <td className={styless.tdMaterial}>{item?.UTILIZADO}</td>

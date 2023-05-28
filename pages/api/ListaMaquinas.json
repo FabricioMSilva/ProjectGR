@@ -1,0 +1,46 @@
+[
+    {   "Id": "1",
+        "Nome": "M32",
+        "Local": "RO"
+    },
+    {
+        "Id": "2",
+        "Nome": "M40",
+        "Local": "RO"
+    },
+    {
+        "Id": "3",
+        "Nome": "M661",
+        "Local": "RO"
+    },
+    {
+        "Id": "4",
+        "Nome": "M48",
+        "Local": "RO"
+    },
+    {
+        "Id": "5",
+        "Nome": "M48",
+        "Local": "RO"
+    },
+    {
+        "Id": "6",
+        "Nome": "M641",
+        "Local": "RO"
+    },
+    {
+        "Id": "7",
+        "Nome": "M536",
+        "Local": "RO"
+    },
+    {
+        "Id": "8",
+        "Nome": "M556",
+        "Local": "RO"
+    },
+    {
+        "Id": "9",
+        "Nome": "OZCAMS",
+        "Local": "RO"
+    }
+]

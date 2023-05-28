@@ -1,42 +1,48 @@
-.DivIcons {
+.Menu{
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+position: absolute;
+left: 15px;
 
-    display: grid;
-    justify-content: center;
-    width: 10vw;
-text-align: center;
-    align-content: space-around;
-    background-color: white;
-    height: 100vh;
-
-    position: fixed;
 }
-
-.Icon {
-    display: grid;
-   text-align: center;
+.DivIcons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 8vw;
+  height: 70vh;
+  position: fixed;
   
-   margin-left: 6px;
-  font-size: 10pt;
-
+  border: 1px rgb(255, 255, 255) inset;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: inset rgb(78, 78, 77) 1px 1px 1px 1px;
 }
+.Icon{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+  width: 8vw;
+  height: 17vh;
+}
+
 .Icon:hover{
-  border: yellow 6px outset;
-   
-    transition: 2s;
+  border: 1px rgb(78, 73, 73) inset;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow:  rgb(78, 78, 77) 1px 1px 1px 1px ;
 }
-
-.iconcasa {
-    display: flex;
-
-    width: 60px;
-    height: 60px;
-  margin-left: 8px;
-    margin-top: 8px;
-
+.iconcasa{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
 
 }
-.iconcasa:hover{
-    -webkit-filter: grayescale(1);
-      filter: grayescale(1);
-      filter: yellow;
+.Title{
+  font-size: 0.8rem;
 }

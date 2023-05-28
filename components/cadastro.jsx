@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import style from '../styles/cadastro.module.css'
 
-
-
+import InputMaq from '../components/inputMaq'
 
 export default function Cadastro(todos) {
 
@@ -23,97 +22,82 @@ export default function Cadastro(todos) {
     }
 
     return (
-
+   
         <div className={style.Avo}>
 
-
-            <form className={style.form}>
-
-                <div>
-
-                    <div className={style.content}>
-                        <p className={style.p}>Conjunto:</p>
-                        <input className={style.inputs}
-                            type="text"
-                            name="Conjunto"
-                            id={dadosForm.id}
-                            placeholder='Nome do conjunto'
-                            value={dadosForm.Conjunto}
-                            onChange={onChangeInput}
-                            key={""}
-                        />
-                    </div>
-                    <div className={style.content}>
-                        <p className={style.p}>Maquina:</p>
-                        <select className={style.inputs}
-
-                            type="text"
-                            name="Maquina"
-                            id={dadosForm.id}
-                            placeholder='Nome da Maquina'
-                            value={dadosForm.Maquina}
-                            onChange={onChangeInput}
-                            key={""}
-
-                        >
-                            <option value=""></option>
-                            <option value="">M32</option>
-                            <option value="">M40</option>
-                            <option value="">M48</option>
-                            <option value="">M536</option>
-                            <option value="">M556</option>
-                            <option value="">M641</option>
-                            <option value="">M661</option>
-                            <option value="">MTT99</option>
-                            <option value="">OZCAMS</option>
-                            <option value="">FRIGERIO</option>
-
-                        </select>
-                    </div>
-                    <div className={style.content}>
-                        <p className={style.p}>Desenho:</p>
-                        <input className={style.inputs}
-                            type="text"
-                            name="Desenho"
-                            placeholder='Numero do Desenho'
-                            id=""
-                            value={dadosForm.Desenho}
-                            onChange={onChangeInput}
-                            key={""}
-                        />
-                    </div>
-                    <div className={style.content}>
-                        <p className={style.p}>Link Desenho:</p>
-                        <input className={style.inputs}
-                            type="link"
-                            name="LinkDesenho"
-                            placeholder='Link do desenho em rede'
-                            id={dadosForm.id}
-                            value={dadosForm.LinkDesenho}
-                            onChange={onChangeInput}
-                            key={""}
-                        />
-                    </div>
-                    <div className={style.content}>
-                        <p className={style.p}>Link Foto:</p>
-                        <input className={style.inputs}
-                            type="link"
-                            name="LinkFoto"
-                            placeholder='Link da foto na rede'
-                            id={dadosForm.id}
-                            value={dadosForm.LinkFoto}
-                            onChange={onChangeInput}
-                            key={""}
-                        />
-                    </div>
-                </div>
-                <div className={style.btnCadastro}>
+                <div className={style.Title}>
                     <h1 className={style.titulo}>Cadastro de Conjunto</h1>
-                    <div className={style.btnCadastro}>
-                        <button type="submit" onClick={enviarConjunto} className={style.btnCad}>Enviar</button>
-                    </div>
                 </div>
-            </form>
+                <div className={style.Pai}>
+
+                    <div className={style.TioAlto}>
+
+                        <div className={style.TioBaixo}>
+
+                            <div className={style.contentPai}>
+                                <div className={style.contentFilho}>
+
+                                    <input className={style.inputs}
+                                        type="text"
+                                        name="Conjunto"
+                                        id={dadosForm.id}
+                                        placeholder='Nome do conjunto'
+                                        value={dadosForm.Conjunto}
+                                        onChange={onChangeInput}
+                                        key={""}
+                                    />
+                                </div>
+
+
+
+                                <div className={style.contentFilho}>
+                                    <InputMaq />
+                                </div>
+                                <div className={style.contentFilho}>
+
+                                    <input className={style.inputs}
+                                        type="text"
+                                        name="Desenho"
+                                        placeholder='Numero do Desenho'
+                                        id=""
+                                        value={dadosForm.Desenho}
+                                        onChange={onChangeInput}
+                                        key={""}
+                                    />
+                                </div>
+                                <div className={style.contentFilho}>
+
+                                    <input className={style.inputs}
+                                        type="link"
+                                        name="LinkDesenho"
+                                        placeholder='Link do desenho em rede'
+                                        id={dadosForm.id}
+                                        value={dadosForm.LinkDesenho}
+                                        onChange={onChangeInput}
+                                        key={""}
+                                    />
+                                </div>
+                                <div className={style.contentFilho}>
+
+                                    <input className={style.inputs}
+                                        type="link"
+                                        name="LinkFoto"
+                                        placeholder='Link da foto na rede'
+                                        id={dadosForm.id}
+                                        value={dadosForm.LinkFoto}
+                                        onChange={onChangeInput}
+                                        key={""}
+                                    />
+                                </div>
+                                <div className={style.contentFilho}>
+                                    <button type="submit" onClick={enviarConjunto} className={style.btnCad}>Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+          
 
         </div>
     )
