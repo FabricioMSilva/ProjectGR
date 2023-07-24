@@ -121,10 +121,7 @@ export default function MaquinasCard({ todosMaq }) {
                                                     </tbody>
                                            
    ))} </table> 
-    <img className={styless.img}
-                        src='../public/imagens/1.gif'
-                    >
-                    </img>
+ 
                                         </AccordionItemPanel>
                                     </AccordionItem>
                                 ))}
