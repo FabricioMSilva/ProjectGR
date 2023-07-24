@@ -10,15 +10,18 @@ export default function Menu() {
 
                 <Link className={Styles.Icon} href='./PaginaInicial'>
 
-                    <img className={Styles.iconcasa}
-                        src='/imagens/casa.gif'
-                    >
-                    </img>
                     <p className={Styles.Title}>Home</p>
                 </Link>
+                <Link className={Styles.Icon} href='./Maquinas'>
 
+                    <img className={Styles.iconcasa}
+                        src='/imagens/maquina-de-fabrica.png'
+                    >
+                    </img>
+                    <p className={Styles.Title}>Maquinas</p>
+                    </Link>
                 <Link className={Styles.Icon} href='./PaginaConjuntos'> <img className={Styles.iconcasa}
-                    src='/imagens/livro.gif'
+                    src='/imagens/adiposo.png'
 
                 ></img>
                     <p className={Styles.Title}>Conjuntos</p>

@@ -15,20 +15,10 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/PaginaCadastro": [
+    "/Maquinas": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/PaginaCadastro.js"
-    ],
-    "/PaginaConjuntos": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/PaginaConjuntos.js"
-    ],
-    "/PaginaInicial": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/PaginaInicial.js"
+      "static/chunks/pages/Maquinas.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",

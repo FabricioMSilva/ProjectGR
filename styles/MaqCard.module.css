@@ -1,0 +1,387 @@
+.bisaAvo {
+  display: grid;
+  width: 100vw;
+  height: max-content;
+  margin: 0;
+  padding: 0;
+  justify-items: center;
+background-color: white;
+
+}
+
+.pesquisar {
+
+  width: 430px;
+  height: 79px;
+  display: grid;
+  justify-content: center;
+  margin-top: 30px;
+  border-radius: 25px;
+}
+.inputPesquisa {
+  width: 420px;
+  height: 42px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 25px;
+  background-color: white;
+
+  color: rgb(0, 0, 0);
+
+  border: 1px rgb(255, 255, 255) inset;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: inset rgb(78, 78, 77) 1px 1px 1px 1px;
+
+
+
+}
+.avo {
+  display: grid;
+  
+ 
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px; 
+}
+.Pai {
+  display: grid;
+  position: relative;
+  margin: 30px;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: inset rgb(78, 78, 77) 1px 1px 1px 1px;
+  justify-items: flex-start;
+  background-color: white;
+
+}
+
+
+.descricao {
+  padding: 0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 0px 0px 6px 6px;
+
+  bottom: 0;
+  height: 25px;
+  width: 90px;
+  transition: 1s;
+font-size: 15pt;
+position: absolute;
+}
+
+.divTitulo {
+  display: grid;
+ width: 100%;
+  height: 100%;
+  text-align: center;
+
+
+}
+
+.Pai:hover {
+
+  border: 1px rgb(78, 73, 73) inset;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow:  rgb(78, 78, 77) 1px 1px 1px 1px ;
+
+}
+
+.Pai:active {
+
+  position: none;
+
+  transition: 2s;
+
+
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial Black;
+  font-size: 20px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #0551ad;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+   width: 100px;
+  height: 100px;
+}
+.title:hover{
+
+  color: #071c36;
+  
+}
+
+.AvoModla{
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  
+color:white;
+  border-radius: 8px;
+background-color: white;
+   
+  margin: 5px;
+  
+  }
+
+
+.PaiModal{
+
+display: flex;
+justify-content: center;
+width: 100vw;
+height: 100%;
+margin: 10px;
+padding: 0;
+-webkit-animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+}
+
+.modalOverlay{
+
+-webkit-animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  animation: scale-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+@keyframes scale-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }}
+.Div1 {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+width: 80vw;
+height: 100hw;
+}
+.Div2{
+  display: grid;
+width: 80vw;
+
+
+margin: 10px;
+color: rgb(255, 255, 255);
+
+
+}
+.Modal{
+opacity: 11%;
+  text-align: center;
+  width: 60%; 
+ height: min-content;
+border-radius: 10px;
+ 
+}
+.btnFechar{
+  text-align: end;
+  padding-right: 50px;
+  width: 100vw;
+  height: 40px;
+ color: rgb(255, 255, 255);
+  font-size: 25pt;
+  background-color: transparent;
+  border: 0;
+  opacity: 1;
+}
+
+.DescricaoModal{
+ 
+width: 100%;
+height: max-content;
+text-align: center;
+
+text-align: center;
+}
+.descModal{
+ 
+  width: 40vw;
+
+
+}
+
+.divFotoModal{
+  width: 100%;
+
+    display: grid;
+justify-items: center;
+align-self: center;
+
+      color:rgb(255, 255, 255);
+}
+.fotoModal{
+  display: flex;
+  width:60%;
+  margin-bottom: 20px;
+border-radius: 10px;
+  border: rgb(8, 171, 221) 10px outset;
+
+}
+.idMdal{
+  font-size: 20pt;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.idMdal:hover{
+color: rgb(0, 17, 255);
+}
+.tituloMdal{
+  width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);  
+  color: rgb(248, 223, 0);
+font-size: 14pt ;
+
+}
+.TabelaModalPai{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+.titleModal2{
+  text-align: center;
+  width: 100%;
+  color:rgb(255, 255, 255);
+
+
+}
+.tabelaModal{
+
+text-align: center;
+
+
+}
+
+
+.table{
+ 
+  border-collapse: collapse;
+  margin: auto;
+    text-align: center;
+    height: 60vh;
+  width:40vw;
+  }
+
+.tableTr2{
+  text-align: left;
+  color: rgb(255, 255, 255);
+}
+.tdMaterial{
+
+  border: rgb(8, 171, 221) 1px outset;
+    box-shadow: inset black 1px 1px 1px 0.0px;
+  padding: 3px;
+  
+  margin:3px;
+  font-size: 10pt;
+}
+.tdMaterial:hover{
+  color:yellow;
+}
+.Accordion{
+  display: flex;
+  justify-content: space-around;
+  align-items: self-start;
+
+  width: 98%;
+
+
+}
+.AccordionItem{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: white;
+  height: 50px;
+  border-radius: 15px 15px 15px 15px;
+  border: 1px rgb(255, 255, 255) inset;
+ 
+  box-shadow: inset rgb(78, 78, 77) 1px 1px 1px 1px;
+}
+.AccordionItem:hover{
+  border: 1px rgb(78, 73, 73) inset;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow:  rgb(78, 78, 77) 1px 1px 1px 1px ;
+}
+.AccordionItemHeading{
+  width: 100%;
+ 
+  align-items: center;
+  justify-content: center;
+}
+.AccordionItemPanel{
+  width: 100vw;
+  margin-top:100px;
+
+  color: black;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  background-color: white transparent ;
+  border-radius: 15px 15px 15px 15px;
+}
+.ButtonArcodion{
+  width: 100%;
+  border-radius: 15px 15px 15px 15px;
+  color: black;
+
+}
+
+.table {
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow:  rgb(78, 78, 77) 1px 1px 1px 1px ;
+}
+.thead{
+
+  width: min-content;
+ 
+}
+.peca{
+  width: 800px;
+  
+}
+.th{
+
+  margin: 5px;
+}
+.td{
+  font-size: 8pt;
+  border: rgb(130, 130, 130) 1px solid;
+  padding: 5px;
+}
