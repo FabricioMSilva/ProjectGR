@@ -334,3 +334,19 @@ text-align: center;
   padding: 5px;
   color: black;
 }
+
+.Accordion{
+  border: #0551ad solid 1px;
+}
+.AccordionItem{
+  border: #ff135a solid 1px;
+}
+.AccordionItemHeading{
+  border: #13ffc4 solid 1px;
+}
+.ButtonArcodion{
+  border: #ffef13 solid 1px;
+}
+.AccordionItemPanel{
+  border: #ff13cc solid 1px;
+}
