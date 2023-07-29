@@ -308,59 +308,7 @@ text-align: center;
 .tdMaterial:hover{
   color:yellow;
 }
-.Accordion{
-  display: flex;
-  justify-content: space-around;
-  align-items: self-start;
 
-  width: 98%;
-
-
-}
-.AccordionItem{
-  display: grid;
-  align-items: center;
-  justify-content: center;
- 
-  width: 100%;
-  margin-bottom: 30px;
-  background-color: white;
-  height: 50px;
-  border-radius: 15px 15px 15px 15px;
-  border: 1px rgb(255, 255, 255) inset;
- 
-  box-shadow: inset rgb(78, 78, 77) 1px 1px 1px 1px;
-}
-.AccordionItem:hover{
-  border: 1px rgb(78, 73, 73) inset;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow:  rgb(78, 78, 77) 1px 1px 1px 1px ;
-}
-.AccordionItemHeading{
-  width: 100%;
- 
-  align-items: center;
-  justify-content: center;
-}
-.AccordionItemPanel{
-  width: 100vw;
-  margin-top:100px;
-
-  color: black;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  height: max-content;
-  background-color: white transparent ;
-  border-radius: 15px 15px 15px 15px;
-}
-.ButtonArcodion{
-  width: 100%;
-  border-radius: 15px 15px 15px 15px;
-  color: black;
-
-}
 
 .table {
   background-color: white;
@@ -384,4 +332,5 @@ text-align: center;
   font-size: 8pt;
   border: rgb(130, 130, 130) 1px solid;
   padding: 5px;
+  color: black;
 }

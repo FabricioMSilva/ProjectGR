@@ -1,7 +1,0 @@
-   const onChangeInput = e => setdadosForm(
-        { ...dadosForm, [e.target.name]: e.target.value })
-    const enviarConjunto = async e => {
-        e.preventDefault()
-        console.log(dadosForm.Conjunto)
-
-    }
