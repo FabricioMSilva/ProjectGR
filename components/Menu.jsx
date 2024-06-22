@@ -9,7 +9,10 @@ export default function Menu() {
             <div className={Styles.DivIcons}>
 
                 <Link className={Styles.Icon} href='./PaginaInicial'>
-
+                <img className={Styles.iconcasa}
+                        src='/imagens/casa.png'
+                    >
+                    </img>
                     <p className={Styles.Title}>Home</p>
                 </Link>
                 <Link className={Styles.Icon} href='./Maquinas'>

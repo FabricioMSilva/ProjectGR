@@ -48,9 +48,6 @@ export default function Card({ todos }) {
                 />
             </div>
             <div className={styless.avo} key={todos?.id} >
-
-
-
                 {todos?.filter((Filtrado) => {
                     if (Pesquisa === "") {
                         return Filtrado
