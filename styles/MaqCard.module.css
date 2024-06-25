@@ -5,23 +5,23 @@
   margin: 0;
   padding: 0;
   justify-items: center;
-  background-color: rgb(149, 205, 238);
+  background-color: rgb(255, 255, 255);
 
 }
 
 .pesquisar {
 
   width: 430px;
-  height: 79px;
+  height: 60px;
   display: grid;
   justify-content: center;
   margin-top: 30px;
   border-radius: 25px;
 }
 .inputPesquisa {
-  width: 420px;
-  height: 42px;
-  font-size: 1.2rem;
+  width: 320px;
+  height: 32px;
+  font-size: 1rem;
   text-align: center;
   border-radius: 25px;
   background-color: white;
@@ -37,8 +37,6 @@
 }
 .avo {
   display: grid;
-  
- 
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(4, 1fr);
 grid-column-gap: 0px;
