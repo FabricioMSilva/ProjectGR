@@ -37,6 +37,15 @@ type Data ={
               VALOR: ""
           },
           {
+            ID: "1001",
+            CODIGO: "BRA538264",
+            MATERIAL: "PORCA MODELO NOVO",
+            UTILIZADO: "1",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+          {
               ID: "1001",
               CODIGO: "BRA80820X",
               MATERIAL: "ROLAMENTO 25X52X15 6205 2RS1",
