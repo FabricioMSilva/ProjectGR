@@ -20,7 +20,7 @@ type Data ={
 
           {
               ID: "1001",
-              CODIGO: "BR8549071",
+              CODIGO: "BCU88148",
               MATERIAL: "EIXO DESENHO 1/00506-00059-RB REV.J DETALHE A7",
               UTILIZADO: "",
               REFERENCIA: "",
