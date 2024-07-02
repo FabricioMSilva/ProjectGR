@@ -811,6 +811,42 @@ type Data ={
               VALOR: ""
           },
           {
+            ID: "1077",
+            CODIGO: "BR017224X ",
+            MATERIAL: "CORRENTE ",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1077",
+            CODIGO: "BR0172698 ",
+            MATERIAL: "EMENDA DE CORRENTE ",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1077",
+            CODIGO: "BR0173444",
+            MATERIAL: "ESTICADOR",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1077",
+            CODIGO: "BR8396675",
+            MATERIAL: "ROSETA",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+          {
               ID: "1091",
               CODIGO: "BR8550285",
               MATERIAL: "TAMPA FRONTAL",
