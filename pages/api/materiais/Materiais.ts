@@ -1206,6 +1206,25 @@ type Data ={
               SALDOJN: "",
               VALOR: ""
           },
+
+          {
+            ID: "1113",
+            CODIGO: "BRA209541",
+            MATERIAL: "ROLAMENTO",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1113",
+            CODIGO: "BR0235965",
+            MATERIAL: "jUNTA O RING N°68",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
           {
               ID: "1078",
               CODIGO: "BR8672808",
