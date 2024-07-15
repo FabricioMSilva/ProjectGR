@@ -20,7 +20,7 @@ type Data ={
 
           {
               ID: "1001",
-              CODIGO: "BR8549071",
+              CODIGO: "BCU88148",
               MATERIAL: "EIXO DESENHO 1/00506-00059-RB REV.J DETALHE A7",
               UTILIZADO: "",
               REFERENCIA: "",
@@ -36,6 +36,15 @@ type Data ={
               SALDOJN: "",
               VALOR: ""
           },
+          {
+            ID: "1001",
+            CODIGO: "BRA538264",
+            MATERIAL: "PORCA MODELO NOVO",
+            UTILIZADO: "1",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
           {
               ID: "1001",
               CODIGO: "BRA80820X",
@@ -802,6 +811,42 @@ type Data ={
               VALOR: ""
           },
           {
+            ID: "1077",
+            CODIGO: "BR017224X ",
+            MATERIAL: "CORRENTE ",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1077",
+            CODIGO: "BR0172698 ",
+            MATERIAL: "EMENDA DE CORRENTE ",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1077",
+            CODIGO: "BR0173444",
+            MATERIAL: "ESTICADOR",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1077",
+            CODIGO: "BR8396675",
+            MATERIAL: "ROSETA",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+          {
               ID: "1091",
               CODIGO: "BR8550285",
               MATERIAL: "TAMPA FRONTAL",
@@ -1161,6 +1206,25 @@ type Data ={
               SALDOJN: "",
               VALOR: ""
           },
+
+          {
+            ID: "1113",
+            CODIGO: "BRA209541",
+            MATERIAL: "ROLAMENTO",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
+        {
+            ID: "1113",
+            CODIGO: "BR0235965",
+            MATERIAL: "jUNTA O RING N°68",
+            UTILIZADO: "",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
           {
               ID: "1078",
               CODIGO: "BR8672808",
