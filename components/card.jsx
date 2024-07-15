@@ -55,7 +55,7 @@ export default function Card({ todos }) {
                     return Filtrado.CONJUNTO.includes(Pesquisa) || Filtrado.MAQUINA.includes(Pesquisa)
                 })?.map(todos => (
 
-                    <div onClick={() => { escolhendoID(), abrirModal(), setModalDados(todos) }} type='Submit' className={styless.Pai}  >
+                    <div onClick={() => { escolhendoID(), abrirModal(), setModalDados(todos) }} type='Submit' className={styless.Pai}>
 
 
                         <div key={todos?.id} className={styless.divFoto}>
