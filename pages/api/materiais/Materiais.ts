@@ -526,7 +526,7 @@ type Data ={
               ID: "1066",
               CODIGO: "BR8959247",
               MATERIAL: "ANEL ORING 167X3,53",
-              UTILIZADO: "",
+              UTILIZADO: "1",
               REFERENCIA: "",
               SALDOJN: "",
               VALOR: ""
@@ -535,7 +535,7 @@ type Data ={
               ID: "1066",
               CODIGO: "BR0235475",
               MATERIAL: "ANEL ORING PARAFUSO",
-              UTILIZADO: "",
+              UTILIZADO: "4",
               REFERENCIA: "",
               SALDOJN: "",
               VALOR: ""
@@ -544,7 +544,7 @@ type Data ={
               ID: "1066",
               CODIGO: "BR0132134",
               MATERIAL: "ROLAMENTO 40X90X23",
-              UTILIZADO: "",
+              UTILIZADO: "1",
               REFERENCIA: "",
               SALDOJN: "",
               VALOR: ""
@@ -553,7 +553,7 @@ type Data ={
               ID: "1066",
               CODIGO: "BR0132127",
               MATERIAL: "ROLAMENTO 40X80X18",
-              UTILIZADO: "",
+              UTILIZADO: "1",
               REFERENCIA: "",
               SALDOJN: "",
               VALOR: ""
@@ -562,7 +562,7 @@ type Data ={
               ID: "1066",
               CODIGO: "BR0159129",
               MATERIAL: "RETENTOR 80X100X13",
-              UTILIZADO: "",
+              UTILIZADO: "1",
               REFERENCIA: "",
               SALDOJN: "",
               VALOR: ""
