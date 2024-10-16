@@ -72,6 +72,16 @@ type Data ={
               SALDOJN: "",
               VALOR: ""
           },
+
+          {
+            ID: "1003",
+            CODIGO: "BR8761328",
+            MATERIAL: "PASTILHA DE FREIO",
+            UTILIZADO: "30",
+            REFERENCIA: "",
+            SALDOJN: "",
+            VALOR: ""
+        },
           {
               ID: "1089",
               CODIGO: "BR0159048",
